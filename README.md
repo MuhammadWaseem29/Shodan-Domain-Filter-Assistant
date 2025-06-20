@@ -7,6 +7,7 @@ Domain List Input: Add target domains (one per line, e.g., nasa.gov, *.tesla.com
 Generate & Open: Creates filtered queries and opens each in a new tab with a 1.5-second delay.
 Persistence: Stores the last used base query in localStorage.
 Validation: Ensures valid domain inputs.
+Dark/Light Mode: Toggle between themes with persistent storage.
 
 Installation
 
@@ -23,6 +24,7 @@ Enter a base Shodan query in the first input field.
 List target domains in the second field (one per line).
 Click Generate Queries & Open Tabs.
 Filtered Shodan search tabs will open automatically.
+Toggle between dark and light modes using the theme button in the header.
 
 Example
 
@@ -43,4 +45,5 @@ Notes
 
 Fully client-side; no external dependencies or API calls.
 Tested with Chrome Manifest V3.
+Version: 1.2 (includes UI enhancements and theme toggle).
 

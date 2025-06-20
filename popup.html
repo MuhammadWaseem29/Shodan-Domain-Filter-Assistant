@@ -8,19 +8,25 @@
 </head>
 <body>
   <div class="container">
-    <h1>Shodan Domain Filter Assistant</h1>
-    <div class="input-group">
-      <label for="base-query">Base Shodan Query:</label>
-      <input type="text" id="base-query" placeholder="e.g., cpe:&quot;cpe:2.3:o:paloaltonetworks:pan-os&quot;">
-    </div>
-    <div class="input-group">
-      <label for="domains">Target Domains (one per line):</label>
-      <textarea id="domains" rows="5" placeholder="nasa.gov
-sony.com
-*.tesla.com"></textarea>
-    </div>
-    <button id="generate-btn">Generate Queries & Open Tabs</button>
-    <p id="status" class="status"></p>
+    <header>
+      <h1>Shodan Domain Filter</h1>
+      <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+    </header>
+    <main>
+      <section class="input-group">
+        <label for="base-query">Base Shodan Query</label>
+        <input type="text" id="base-query" placeholder="e.g., cpe:&quot;cpe:2.3:o:paloaltonetworks:pan-os&quot;" autocomplete="off">
+      </section>
+      <section class="input-group">
+        <label for="domains">Target Domains (one per line)</label>
+        <textarea id="domains" rows="5" placeholder="nasa.gov&#10;sony.com&#10;*.tesla.com"></textarea>
+      </section>
+      <button id="generate-btn">Generate Queries & Open Tabs</button>
+      <p id="status" class="status"></p>
+    </main>
+    <footer>
+      <p>v1.2 | For Bug Bounty Hunters</p>
+    </footer>
   </div>
   <script src="popup.js"></script>
 </body>

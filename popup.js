@@ -3,12 +3,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const domainsInput = document.getElementById('domains');
   const generateBtn = document.getElementById('generate-btn');
   const status = document.getElementById('status');
+  const themeToggle = document.getElementById('theme-toggle');
 
   // Load the last used base query from localStorage
   chrome.storage.local.get('lastBaseQuery', (data) => {
     if (data.lastBaseQuery) {
       baseQueryInput.value = data.lastBaseQuery;
     }
+  });
+
+  // Load theme preference
+  chrome.storage.local.get('theme', (data) => {
+    if (data.theme === 'dark') {
+      document.body.classList.add('dark-mode');
+      themeToggle.textContent = '☀️';
+    }
+  });
+
+  // Theme toggle functionality
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    themeToggle.textContent = isDark ? '☀️' : '🌙';
+    chrome.storage.local.set({ theme: isDark ? 'dark' : 'light' });
   });
 
   generateBtn.addEventListener('click', () => {
