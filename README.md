@@ -33,6 +33,10 @@ A Chrome extension designed for bug bounty hunters to refine Shodan queries by a
   sony.com
   *.tesla.com
   ```
+
+![Screenshot From 2025-06-20 11-38-31](https://github.com/user-attachments/assets/3c1ebb69-7b00-4ed5-b0a6-b66ac25a3729)
+
+
 - **Output Tabs:**
   - `https://www.shodan.io/search?query=cpe%3A%22cpe%3A2.3%3Ao%3Apaloaltonetworks%3Apan-os%22+hostname%3Anasa.gov`
   - `https://www.shodan.io/search?query=cpe%3A%22cpe%3A2.3%3Ao%3Apaloaltonetworks%3Apan-os%22+hostname%3Asony.com`
