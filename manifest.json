@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Shodan Domain Filter Assistant",
+  "version": "1.0",
+  "description": "A Chrome extension for bug bounty hunters to refine Shodan queries with domain filters and open results in new tabs.",
+  "permissions": ["tabs", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

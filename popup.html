@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shodan Domain Filter Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Shodan Domain Filter Assistant</h1>
+    <div class="input-group">
+      <label for="base-query">Base Shodan Query:</label>
+      <input type="text" id="base-query" placeholder="e.g., cpe:&quot;cpe:2.3:o:paloaltonetworks:pan-os&quot;">
+    </div>
+    <div class="input-group">
+      <label for="domains">Target Domains (one per line):</label>
+      <textarea id="domains" rows="5" placeholder="nasa.gov
+sony.com
+*.tesla.com"></textarea>
+    </div>
+    <button id="generate-btn">Generate Queries & Open Tabs</button>
+    <p id="status" class="status"></p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
